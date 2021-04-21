@@ -9,7 +9,7 @@ class Employe
 
     public function afficheInfo()
     {
-        echo " je suis $this->nom $this->prenom";
+        echo " je suis $this->nom, $this->prenom";
     }
     public function calculPrime()
 
