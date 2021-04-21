@@ -2,7 +2,7 @@
 require("Animal.php");
 require("Voiture.php");
 echo Animal::MAMMIFERE;
-
+echo '<br>';
 // $animal = new Animal();
 // echo '<br>';
 Animal::afficheAnimal();
