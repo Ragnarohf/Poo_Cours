@@ -2,13 +2,18 @@
 <?php
 class Abonne
 {
-    //caracteristiques => propiriétés
+
     public $nom;
     public $prenom;
     private $age;
 
     //le constructeur
-    //new PDO(mysqblblbla)
+    public function __construct(string $nom, string $prenom, int $age)
+    {
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->age = $age;
+    }
 
     // acceseurs get et set
     public function getAge(): int
