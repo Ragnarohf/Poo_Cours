@@ -1,16 +1,12 @@
-<?php
 
+<?php
 class Abonne
 {
-    // caracteristiques
-    //nom, prenom, age
     public $nom;
     public $prenom;
     public $age;
-
-    // methodes
-    public function createAbonne()
+    public function createAbonne($nomEntreprise)
     {
-        echo "je suis l'abonne de la classe";
+        echo "je suis l'abonne $this->nom, $this->prenom de  $nomEntreprise";
     }
 }
