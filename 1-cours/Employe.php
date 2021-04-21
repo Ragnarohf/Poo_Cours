@@ -1,11 +1,41 @@
 <?php
 class Employe
 {
-    public $nom;
-    public $prenom;
+    private $nom;
+    private $prenom;
     public $sexe;
     public $age;
-    public $salaire;
+    private $salaire;
+    // acceseurs Nom
+    public function getNom(): int
+    {
+        return $this->Nom;
+    }
+    public function setNom($nom): self
+    {
+        $this->nom = $nom;
+        return $this;
+    }
+    // acceseurs prenom
+    public function getPrenom(): int
+    {
+        return $this->prenom;
+    }
+    public function setPrenom($prenom): self
+    {
+        $this->prenom = $prenom;
+        return $this;
+    }
+    // acceseurs salaire
+    public function getSalaire(): int
+    {
+        return $this->salaire;
+    }
+    public function setSalaire($salaire): self
+    {
+        $this->salaire = $salaire;
+        return $this;
+    }
 
     public function afficheInfo()
     {
