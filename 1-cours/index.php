@@ -23,7 +23,7 @@ $employe->setPrenom('Sandra');
 $employe->sexe = 'femme';
 $employe->age = 20;
 //$employe->salaire = 2145;
-$employe->setSalaire(17);
+$employe->setSalaire(2517);
 
 var_dump(($employe));
 $employe->afficheInfo();
