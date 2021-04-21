@@ -2,7 +2,7 @@
 class Animal
 {
     const MAMMIFERE = "chien";
-    public static $nom;
+    public static $nom = "mathieu";
 
     public function afficheAnimal()
     {
