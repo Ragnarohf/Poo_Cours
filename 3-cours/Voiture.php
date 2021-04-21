@@ -65,7 +65,8 @@ class Voiture
     public function afficheVitesse()
     {
         $vitesse = $this->calculVitesse();
-        echo "vitesse de la voiture  $vitesse km/h";
+
+        echo "vitesse de la voiture  $this->marque de la couleur $this->couleur est de $vitesse km/h";
     }
 
     public function afficheDistance()
