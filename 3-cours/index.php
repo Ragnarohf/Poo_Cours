@@ -1,6 +1,6 @@
 <?php
 require("Voiture.php");
-$voiture = new Voiture("audi", 'rose', 45, 30);
+$voiture = new Voiture("mini", 'rouge', 2000, 100);
 
 var_dump($voiture);
 $voiture->afficheVitesse();
