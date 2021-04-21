@@ -2,8 +2,11 @@
 require("Animal.php");
 echo Animal::MAMMIFERE;
 
-$animal = new Animal();
+// $animal = new Animal();
+// echo '<br>';
+Animal::afficheAnimal();
 echo '<br>';
-$animal->afficheAnimal();
+echo Animal::getNom();
 echo '<br>';
-echo $animal::$nom;
+echo Animal::setNom('fifou');
+echo '<br>';

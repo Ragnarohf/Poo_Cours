@@ -2,10 +2,24 @@
 class Animal
 {
     const MAMMIFERE = "chien";
-    public static $nom = "mathieu";
+    private static $nom = "mathieu";
+    // acceseurs nom
 
-    public function afficheAnimal()
+    public static function getNom()
     {
-        echo "l'aninmal est un " . $this::MAMMIFERE;
+
+        return self::$nom;
+    }
+    public static function setNom($nom)
+    {
+        self::$nom = $nom;
+        return self::$nom;
+    }
+
+    public static function afficheAnimal()
+    {
+        echo "l'aninmal est un " . self::MAMMIFERE;
+        echo "<br>";
+        echo "le nom de l'animal est " . self::$nom;
     }
 }
