@@ -7,4 +7,10 @@ class Abonne
     public $nom;
     public $prenom;
     public $age;
+
+    // methodes
+    public function createAbonne()
+    {
+        echo "je suis l'abonne de la classe";
+    }
 }
