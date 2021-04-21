@@ -7,7 +7,6 @@ class Animal
 
     public static function getNom()
     {
-
         return self::$nom;
     }
     public static function setNom($nom)
