@@ -2,9 +2,10 @@
 class Animal
 {
     const MAMMIFERE = "chien";
+    public static $nom;
 
     public function afficheAnimal()
     {
-        echo "l'animal est un chien ";
+        echo "l'aninmal est un " . $this::MAMMIFERE;
     }
 }
