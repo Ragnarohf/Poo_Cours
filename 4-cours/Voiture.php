@@ -66,11 +66,11 @@ class Voiture
     {
         $vitesse = self::calculVitesse();
 
-        echo "vitesse de la voiture" .  self::$marque . " de la couleur" . self::$couleur . " est de $vitesse km/h";
+        echo "vitesse de la voiture " .  self::$marque . " de la couleur " . self::$couleur . " est de $vitesse km/h";
     }
 
     public static function afficheDistance()
     {
-        echo "Distance parcourue par la voiture" . self::$distance . "km";
+        echo "Distance parcourue par la voiture " . self::$distance . " km";
     }
 }
