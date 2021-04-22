@@ -2,11 +2,24 @@
 
 use App\Formulaire;
 
-require('Formulaire.php');
+require "Formulaire.php";
+
+$input1 = new Formulaire();
+$formulaire = new Formulaire();
+var_dump($input1);
 
 
-$formulaire = new Formulaire("nom", "mathieu", "text");
-var_dump($formulaire);
 
-$formulaire->input();
-$formulaire->submit('send');
+
+
+echo "<br>";
+$input1->form("post");
+
+$i = 0;
+$tbName = ['coucou', 'fff', 'toi'];
+$tbValue = ['fifou', 1596, 'jerem'];
+$tbType = ['text', 'number', 'text'];
+while ($i < count($tbName)) {
+    $formulaire->input($tbName[$i], $tbValue[$i], $tbType[$i]);
+    $i++;
+}
