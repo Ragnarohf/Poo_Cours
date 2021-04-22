@@ -19,4 +19,4 @@ require "CompteEpargne.php";
 $compteCourrant = new CompteCourrant("mathieu", 1400, 300);
 var_dump($compteCourrant);
 $compteCourrant->afficheSolde();
-$compteCourrant->retirerArgent(1600);
+$compteCourrant->retirerArgent(1400);

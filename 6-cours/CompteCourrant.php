@@ -24,7 +24,7 @@ class CompteCourrant extends Compte
     //retirer argnet !== retirer argent de la classe mere => polymorphisme
     public function retirerArgent(float $montant)
     {
-        if ($montant > 0 && ($this->getSolde() - $montant <= $this->decouvert)) {
+        if ($montant > 0 && (($this->getSolde() - $montant) >= -$this->decouvert)) {
             $this->setSolde($this->getSolde() - $montant);
             $this->afficheSolde();
         } else {
