@@ -30,4 +30,8 @@ $compteCourrant->afficheSolde();
 $compteCourrant->retirerArgent(1400);
 CompteEpargne::afficheBanque();
 
-$compteClient = new CompteClient();
+$compteE = new CompteEpargne('jeremy', 400, 0);
+$compteClient = new CompteClient("le ouistiti", "jeremy", 21, $compteE);
+
+// retirer de l'argent du compte Epargne du client
+$compteClient->compteEpargne->retirerArgent(330);
