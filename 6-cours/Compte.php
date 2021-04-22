@@ -3,7 +3,7 @@
 /**
  * la classe compte
  */
-class Compte
+abstract class Compte
 {
     private $titulaire;
     private $solde;

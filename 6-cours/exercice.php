@@ -11,6 +11,6 @@
  * 
  * 
  * j'ai 2 type de compte (CompteEpargne et CompteCourant)
- * CompteEpargne => taux d'interet => const
- * CompteCourant => decouvert
+ * CompteEpargne => taux d'interet => const calculTauxInteret(solde*taux/100)
+ * CompteCourant => decouvert retirerArgent
  */
