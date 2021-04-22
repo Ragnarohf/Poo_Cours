@@ -15,5 +15,5 @@ var_dump($abonneSport);
 
 $abonneSport->createAbonne('entreprise');
 
-// $aboSF = new AbonneSportFoot();
-// var_dump($aboSF);
+$aboSF = new AbonneSportFoot("charle", "dede", 'foot', "bleu");
+var_dump($aboSF);
