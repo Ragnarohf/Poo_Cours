@@ -1,8 +1,16 @@
 <?php
-require "Compte.php";
-require "CompteCourrant.php";
-require "CompteEpargne.php";
 
+
+
+require "banque/Compte.php";
+require "banque/CompteCourrant.php";
+require "banque/CompteEpargne.php";
+require "client/Compte.php";
+
+
+use App\banque\CompteCourrant;
+use App\banque\CompteEpargne;
+use App\Client\Compte as CompteClient;
 // $compte = new Compte("mathieu", 2000);
 // var_dump($compte);
 
@@ -20,3 +28,6 @@ $compteCourrant = new CompteCourrant("mathieu", 1400, 300);
 var_dump($compteCourrant);
 $compteCourrant->afficheSolde();
 $compteCourrant->retirerArgent(1400);
+CompteEpargne::afficheBanque();
+
+$compteClient = new CompteClient();

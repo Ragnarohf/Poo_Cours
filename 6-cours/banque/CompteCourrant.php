@@ -1,5 +1,7 @@
 <?php
 
+namespace App\banque;
+
 class CompteCourrant extends Compte
 {
     private  $decouvert;

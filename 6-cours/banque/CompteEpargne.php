@@ -1,4 +1,7 @@
 <?php
+
+namespace App\banque;
+
 class CompteEpargne extends Compte
 {
     private  $taux_interet;
@@ -26,5 +29,9 @@ class CompteEpargne extends Compte
         $this->solde = $this->solde + ($this->solde * $this->taux_interet / 100);
         echo $this->afficheSolde();
         //echo "votre nouveau solde $this->titulaire dans le compte epargne est de $this->solde";
+    }
+    static function afficheBanque()
+    {
+        echo "ma banque est " . self::BANQUE;
     }
 }
