@@ -1,6 +1,6 @@
 
 <?php
- abstract class Abonne
+abstract class Abonne
 {
     //caracteristiques => propiriétés
     public $nom;
@@ -8,7 +8,14 @@
     private $age;
 
     //le constructeur
-    //new PDO(mysqblblbla)
+    public function __construct($nom, $prenom)
+    {
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+    }
+
+
+
 
     // acceseurs get et set
     public function getAge(): int

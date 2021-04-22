@@ -3,16 +3,17 @@
 require("Abonne.php");
 require "AbonneSport.php";
 require 'AbonneSportFoot.php';
-// $abonne = new Abonne();
+//$abonne = new Abonne();
 // var_dump($abonne); vu que la classe est en asbtract
+//$abonne-> setAge(17);
+$abonneSport = new AbonneSport("charles", "dede", 'natation');
+$abonneSport->nom = 'pierre';
+$abonneSport->prenom = 'nina';
 
-$abonneSport = new AbonneSport();
-$abonneSport->nom='pierre';
-$abonneSport->prenom='nina';
-$abonneSport->setAge(14);
+// $abonneSport->setType("mon foot");
 var_dump($abonneSport);
 
 $abonneSport->createAbonne('entreprise');
 
-$aboSF= new AbonneSportFoot();
-var_dump($aboSF);
+// $aboSF = new AbonneSportFoot();
+// var_dump($aboSF);
