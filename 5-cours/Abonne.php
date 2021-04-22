@@ -1,6 +1,6 @@
 
 <?php
-class Abonne
+ abstract class Abonne
 {
     //caracteristiques => propiriétés
     public $nom;
