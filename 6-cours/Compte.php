@@ -38,7 +38,7 @@ class Compte
 
     public function afficheSolde()
     {
-        echo "<br> le de votre compte est de  $this->solde <br>";
+        echo "<br> le solde votre compte est de  $this->solde euros <br>";
     }
 
     public function deposerArgent(float $montant)
@@ -46,6 +46,7 @@ class Compte
         if ($montant > 0) {
             $this->solde += $montant;
         }
+        $this->afficheSolde();
         return $this->solde;
     }
 
