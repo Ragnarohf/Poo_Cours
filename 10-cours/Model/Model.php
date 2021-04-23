@@ -39,6 +39,7 @@ class Model extends DB
 
         foreach ($attributs as $key => $value) {
             $tableauCle[] = "$key = :$key";
+            // on a tout donné pour cette value Rest In Peace
             $value;
         }
         // select * from livre where auteur =:auteur and livre =:livre
