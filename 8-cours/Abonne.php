@@ -1,6 +1,6 @@
 
 <?php
-class Abonne
+class Abonne implements Maison
 {
     //caracteristiques => propiriétés
     public $nom;
@@ -25,5 +25,14 @@ class Abonne
     public function createAbonne($nomEntreprise)
     {
         echo "je suis l'abonne $this->nom, $this->prenom de  $nomEntreprise";
+    }
+    public function seDeplacer()
+    {
+        echo "je me deplace";
+    }
+
+    public function allumer()
+    {
+        echo " j'allume le feu";
     }
 }
