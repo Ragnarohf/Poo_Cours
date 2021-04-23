@@ -47,4 +47,26 @@ class Model extends DB
         $requete = $this->requete(" SELECT * from $this->table where $meschamps", $attributs);
         return $requete->fetchAll();
     }
+    public function update(array $attributs, array $condition)
+    {
+        $tableauCle = [];
+        $tabchampsCondition = [];
+        foreach ($attributs as $key => $value) {
+            $tableauCle[] = "$key = :$key";
+            $value;
+        }
+        foreach ($condition as $key => $value) {
+            $tabchampsCondition[] = "$key = :$key";
+            $value;
+        }
+        //select * from livre where auteur = :auteur and livre = :livre
+        //update livre set auteur = :auteur where titre =:titre 
+
+        $meschamps = implode(' AND', $tableauCle);
+        $meschampsCondition = implode(' AND', $tabchampsCondition);
+        $this->requete("UPDATE $this->table SET $meschamps where $meschampsCondition", array_merge($attributs, $condition));
+        // echo $requete;
+
+
+    }
 }
