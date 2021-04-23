@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 interface Maison
 {
     public function seDeplacer();

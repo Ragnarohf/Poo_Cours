@@ -1,5 +1,10 @@
-
 <?php
+
+namespace App;
+
+use App\Maison;
+
+require "Maison.php";
 class Abonne implements Maison
 {
     //caracteristiques => propiriétés
