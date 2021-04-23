@@ -13,7 +13,13 @@ class Autoloader
     }
     static function autoload($classe)
     {
-        // echo $classe;
+
         $classe = str_replace(__NAMESPACE__ . "\\", "", $classe);
+        $classe = str_replace("\\", "/", $classe);
+        $classe = $classe . '.php';
+
+
+        $fichier = __DIR__ . "/" . $classe;
+        require $fichier;
     }
 }

@@ -1,13 +1,13 @@
 <?php
 
 
+require 'Autoloader.php';
+// require "banque/Compte.php";
+// require "banque/CompteCourrant.php";
+// require "banque/CompteEpargne.php";
+// require "client/Compte.php";
 
-require "banque/Compte.php";
-require "banque/CompteCourrant.php";
-require "banque/CompteEpargne.php";
-require "client/Compte.php";
-
-
+use App\Autoloader;
 use App\banque\CompteCourrant;
 use App\banque\CompteEpargne;
 use App\Client\Compte as CompteClient;
@@ -23,7 +23,7 @@ use App\Client\Compte as CompteClient;
 // $compteEpargne = new CompteEpargne("joseph", 5000);
 // var_dump($compteEpargne);
 // $compteEpargne->calculInteret(5000);
-
+Autoloader::register();
 $compteCourrant = new CompteCourrant("mathieu", 1400, 300);
 var_dump($compteCourrant);
 $compteCourrant->afficheSolde();
