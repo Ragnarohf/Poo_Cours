@@ -28,4 +28,21 @@ class Model extends DB
         $livres = $requete->fetchAll();
         return $livres;
     }
+
+    //tableau d'attributs
+    //select * from livre where auteur= x and titre = y;
+    //attributs =['auteur=>x', 'titre=>y']
+    // select * from livre where auteur =x 
+    public function findby(array $attributs)
+    {
+        $tableauCle = [];
+
+        foreach ($attributs as $key => $value) {
+            $tableauCle[] = "$key = :$key";
+        }
+        // select * from livre where auteur =:auteur and livre =:livre
+        $meschamps = implode(' AND', $tableauCle);
+        $requete = $this->requete(" SELECT * from $this->table where $meschamps", $attributs);
+        return $requete->fetchAll();
+    }
 }
