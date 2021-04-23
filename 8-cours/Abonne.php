@@ -43,10 +43,10 @@ class Abonne implements Maison, Journal
     }
     public function lireJournal()
     {
-        echo "je lis mon journal ";
+        echo "je lis mon journal " . self::NUMERO;
     }
     public function ecrireJournal()
     {
-        echo "j'ecris mon journal";
+        echo "j'ecris mon journal " . self::NUMERO;
     }
 }
