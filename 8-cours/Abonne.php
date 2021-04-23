@@ -5,7 +5,8 @@ namespace App;
 use App\Maison;
 
 require "Maison.php";
-class Abonne implements Maison
+require "Journal.php";
+class Abonne implements Maison, Journal
 {
     //caracteristiques => propiriétés
     public $nom;
@@ -39,5 +40,13 @@ class Abonne implements Maison
     public function allumer()
     {
         echo " j'allume le feu";
+    }
+    public function lireJournal()
+    {
+        echo "je lis mon journal ";
+    }
+    public function ecrireJournal()
+    {
+        echo "j'ecris mon journal";
     }
 }
