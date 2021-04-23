@@ -67,6 +67,21 @@ class Model extends DB
         $this->requete("UPDATE $this->table SET $meschamps where $meschampsCondition", array_merge($attributs, $condition));
         // echo $requete;
 
+    }
+    public function delete($attributs)
+    {
+        $tableauCle = [];
+
+        foreach ($attributs as $key => $value) {
+            $tableauCle[] = "$key = :$key";
+            $value;
+        }
+        //select * from livre where auteur = :auteur and livre = :livre
+        $meschamps = implode(' AND', $tableauCle);
+        // echo $meschamps;
+        // var_dump($tableauVlaur);
+        $requete = $this->requete("DELETE  from $this->table where $meschamps", $attributs);
+        // echo $requete;
 
     }
 }
